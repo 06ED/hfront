@@ -20,7 +20,7 @@ export default {
 .offer {
   height: 70vh;
   width: 100%;
-  background-image: url('./assets/bookingOffer.jpg');
+  background-image: url('@/assets/bookingOffer.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
