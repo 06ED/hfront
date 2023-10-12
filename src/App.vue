@@ -1,30 +1,30 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <Side/>
+  <Menu/>
+  <wrapper>
+    <router-view></router-view>
+  </wrapper>
+  <Footer/>
 </template>
 
+<script>
+import Menu from "@/components/base/Menu.vue";
+import Wrapper from "@/components/app/wrapper.vue";
+import Footer from "@/components/base/Footer.vue";
+import Side from "@/components/base/Side.vue";
+
+export default {
+  components: {Side, Footer, Wrapper, Menu}
+
+}
+</script>
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-nav {
-  padding: 30px;
-}
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
-}
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Inter, sans-serif;
+    scroll-behavior: smooth;
+  }
 </style>
